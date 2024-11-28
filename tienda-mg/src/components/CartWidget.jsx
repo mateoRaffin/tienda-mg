@@ -1,18 +1,8 @@
-function Cart({onClick}) {
+function Cart() {
     
-    const style = {
-        backgroundColor: color,
-        padding: '10px 20px',
-        border: 'none',
-        color: 'white',
-        cursor: 'pointer'
-    }
     return (
-        <div>
-            <button style={style} onClick={onClick}></button>
-        </div>
+        <img id="cart" src="../src/assets/bag.svg" alt="Carrito de compras"/>
     )
 }
-
 
 export default Cart
