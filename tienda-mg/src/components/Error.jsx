@@ -5,10 +5,10 @@ function Error(){
     };
 
     return(
-        <div>
-            <h1>Error </h1>
-            <h2>No encontramos lo que estás buscando...</h2>
-            <button onClick={handleRedirect}>Volver al Inicio</button>
+        <div className="errorNotFound">
+            <h1 className="title-Error">Error </h1>
+            <h2 className="text-Error">No encontramos lo que estás buscando...</h2>
+            <button id="handleBtn" onClick={handleRedirect}>Volver al Inicio</button>
         </div>
     )
 }

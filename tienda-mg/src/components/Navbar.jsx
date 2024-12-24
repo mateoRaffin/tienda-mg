@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import Cart from "./CartWidget"
-
+import "./styles.css"
 
 function NavBar() {
     return (
@@ -8,20 +8,11 @@ function NavBar() {
             <nav id="navBar">
                 <img id="logo-Nav" src="../src/assets/logo-tp.png" alt="Nuestro Logo" />
                 <ul id="cont-list">
-                    <li>
-                        <Link to={"/"}>Home</Link>
+                    <li id="list-Nav">
+                        <Link className="link-NavBar" to={"/"}>Home</Link>
                     </li>
                     <li>
-                        <Link to={"productos"}>Etiquetas</Link>
-                    </li>
-                    <li>
-                        <Link to={"productos"}>Papelería</Link>
-                    </li>
-                    <li>
-                        <Link to={"productos"}>Tarjetas</Link>
-                    </li>
-                    <li>
-                        <Link to={"productos"}>Sublimación</Link>
+                        <Link className="link-NavBar" to={"/productos"}>Nuestros Productos</Link>
                     </li>
                 </ul>
                 <Cart />

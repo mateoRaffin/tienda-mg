@@ -8,23 +8,25 @@ const categorias = {
     SUBLIMACION: "Sublimación"
 }
 
-function ItemList({items}) {
+function ItemList({ items }) {
 
-    const [selectedCategory,setSelectedCategory] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState("");
 
-    const filteredItems = selectedCategory ? items.filter(item=>item.categoria === selectedCategory) :items;
+    const filteredItems = selectedCategory ? items.filter(item => item.categoria === selectedCategory) : items;
 
     return (
-        <div>
-            <div>
-                <button onClick={()=> setSelectedCategory(categorias.ETIQUETAS)}>Etiquetas</button>
-                <button onClick={()=> setSelectedCategory(categorias.PAPELERIA)}>Papelería</button>
-                <button onClick={()=> setSelectedCategory(categorias.TARJETAS)}>Tarjetas</button>
-                <button onClick={()=> setSelectedCategory(categorias.SUBLIMACION)}>Sublimación</button>
+        <div className="container-List">
+            <h2 className="title-category">Categorías</h2>
+            <div className="cont-Category">
+                <button className="category-Btn" onClick={() => setSelectedCategory(categorias.ETIQUETAS)}>Etiquetas</button>
+                <button className="category-Btn" onClick={() => setSelectedCategory(categorias.PAPELERIA)}>Papelería</button>
+                <button className="category-Btn" onClick={() => setSelectedCategory(categorias.TARJETAS)}>Tarjetas</button>
+                <button className="category-Btn" onClick={() => setSelectedCategory(categorias.SUBLIMACION)}>Sublimación</button>
             </div>
             {filteredItems.map((item) => (
                 <Item
                     key={item.id}
+                    id={item.id}
                     nombre={item.nombre}
                     imagen={item.imagen}
                     precio={item.precio}

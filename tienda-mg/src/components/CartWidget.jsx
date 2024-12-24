@@ -1,7 +1,7 @@
 function Cart() {
     
     return (
-        <img id="cart" src="../src/assets/bag.svg" alt="Carrito de compras"/>
+        <img id="cart" src="../src/assets/cart-shop-bold.svg" alt="Carrito de compras"/>
     )
 }
 

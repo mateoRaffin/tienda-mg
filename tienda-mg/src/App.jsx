@@ -1,10 +1,11 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import NavBar from './components/Navbar'
 import Home from './components/Home';
-import ItemListContainer from './components/ItemListContainer'
-
+import NavBar from './components/Navbar';
+import Error from './components/Error';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
 
@@ -15,7 +16,9 @@ function App() {
         <Routes>
           <Route path='/' element={<NavBar />}>
             <Route index element={<Home />} />
-            <Route path='productos' element={<ItemListContainer/>} /> 
+            <Route path='/productos' element={<ItemListContainer />} />
+            <Route path='/productos/:id' element={<ItemDetailContainer />} />
+            <Route path='*' element={<Error />} />
           </Route>
         </Routes>
       </BrowserRouter>
