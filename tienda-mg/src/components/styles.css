@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     border-bottom: 1px solid #CCC;
     box-shadow: 0 0 5px #CCC;
 }
@@ -68,14 +68,14 @@
     font-size: 40px;
     color: #16161D;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 20px;
     margin-bottom: 80px;
 }
 .cont-Category{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
 .category-Btn{
     width: 200px;
@@ -101,17 +101,18 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: auto;
 }
 .link-Item{
     background-color: #16161D;
     border: none;
     border-radius: 25px;
-    display: flex;
     width: 30%;
-    text-decoration: none;
-    outline: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
+    outline: none;
 }
 .title-Item{
     font-size: 30px;
@@ -147,6 +148,9 @@
 .cont-detail{
     display: flex;
     flex-direction: column;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .title-detail{
     font-size: 30px;
